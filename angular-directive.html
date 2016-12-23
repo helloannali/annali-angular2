@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="./angular.min.js"></script>
+</head>
+<body>
+
+<div ng-app="" ng-init="firstName='anna';lastName='Lee';nums=[1,2,3];objects=[{name: 'annali', height: '161'}, {name: 'bobo', height: '150'}]">
+    <p>在输入框中尝试输入：</p>
+    <p>姓名： <input type="text" ng-model="firstName" /></p>
+    <p>姓名： <input type="text" ng-model="lastName" /></p>
+    <p>您输入的为： {{ firstName + " " + lastName }}</p>
+
+    <p>使用 ng-repeat 来循环数组</p>
+    <ul>
+        <li ng-repeat="num in nums">
+            {{ num }}
+        </li>
+    </ul>
+
+    <p>使用 ng-repeat 来循环对象数组</p>
+    <ul>
+        <li ng-repeat="obj in objects">
+            {{ obj.name + ": " + obj.height}}
+        </li>
+    </ul>
+
+</div>
+
+</body>
+</html> 
