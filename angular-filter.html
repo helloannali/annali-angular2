@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="./angular.min.js"></script>
+<script src="./angular-filter-controller.js"></script>
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="personCtrl">
+    <p>姓名为 {{ lastName | uppercase }}</p>
+
+    <p><input type="text" ng-model="test"></p>
+
+    <ul>
+    <li ng-repeat="x in names | filter:test | orderBy:'country'">
+        {{ (x.name | uppercase) + ', ' + x.country }}
+    </li>
+    </ul>
+</div>
+
+</body>
+</html> 

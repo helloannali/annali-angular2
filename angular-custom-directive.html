@@ -1,16 +1,26 @@
-
-
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="./angular.min.js"></script>
+</head>
 <body ng-app="myApp">
 
-<runoobDirective></runoobDirective>
+<runoob-directive></runoob-directive>
+<div runoob-directive></div>
+<div class="runoob-directive"></div>
+<!-- directive: runoob-directive -->
 
-<script src="./angular.min.js"></script>
+
 <script>
     var app = angular.module("myApp", []);
     app.directive("runoobDirective", function() {
         return {
-            template: "<h1>自定义指令!</h1>"
+            restrict : "EACM",
+            replace : true,
+            template : "<h1>自定义指令ok!</h1>"
         };
     });
 </script>
 </body>
+</html>
